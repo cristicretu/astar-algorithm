@@ -136,7 +136,7 @@ def main(win, width):
 
 			if pygame.mouse.get_pressed()[0]: # LEFT
 				pos = pygame.mouse.get_pos()
-				row, col = get_clicked_pos(pos, ROWS, width)
+				row, col = hget_clicked_pos(pos, ROWS, width)
 				spot = grid[row][col]
 				if not start and spot != end:
 					start = spot
@@ -151,7 +151,7 @@ def main(win, width):
 
 			elif pygame.mouse.get_pressed()[2]: # RIGHT
 				pos = pygame.mouse.get_pos()
-				row, col = get_clicked_pos(pos, ROWS, width)
+				row, col = hget_clicked_pos(pos, ROWS, width)
 				spot = grid[row][col]
 				spot.reset()
 				if spot == start:
